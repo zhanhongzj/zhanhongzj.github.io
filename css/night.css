@@ -1,0 +1,52 @@
+.night {
+  background-color: rgba(0,0,20,0.95) !important;
+  color: #fff;
+}
+.night a {
+  color: #fff;
+}
+.night footer,
+.night header {
+  background-color: rgba(12,12,31,0.64) !important;
+}
+.night .left {
+  background-color: rgba(48,45,34,0.31) !important;
+}
+.night .left li {
+  background-color: #17161f !important;
+}
+.night .left a {
+  color: #fff;
+}
+.night .right .social,
+.night .tag,
+.night .friends {
+  background-color: rgba(48,45,34,0.31) !important;
+}
+.night .right .social .link .btn {
+  border-color: #17161f;
+}
+.night .right .social .slogan {
+  color: #fff;
+}
+.night .right .friends {
+  color: #fff;
+}
+.night .right .friends .friend a {
+  color: #fff;
+}
+.night .main {
+  background-color: rgba(0,0,30,0.95) !important;
+}
+.night .main .list-box {
+  background-color: rgba(0,0,30,0.95) !important;
+}
+.night .main .list-box .box-right .title {
+  color: #fff !important;
+}
+.night .copyright {
+  background-color: #342a2a;
+}
+.night {
+  transition: all 1.2s ease-in;
+}

@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>SASS 使用教程 | 我的博客</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  <link rel="manifest" href="/manifest.json">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content=我的博客   >
+  <link rel="apple-touch-icon" href="img/icons/152.png">
+  
+  
+  <meta name="theme-color" content="#0c0c1f">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+    <link rel="alternate" href="/atom.xml" title="我的博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body class=" ">
+  	   <div class="iewarn" id="iewarn">
+<div>---------!!!!!!!!!!!!!!!!-----------------</div>
+检测到您正在使用IE9或更低版本浏览器访问本站，为了您的阅读体验，本站推荐您使用<a href="https://www.google.com/chrome/" target="_blank" >Chrome浏览器</a> 或者<a href="https://www.mozilla.org/en-US/firefox/products/" target="_blank" >Firefox浏览器 </a> 对本站进行访问
+
+</div>
+      <header class="main-header">
+
+<div class="logo nav-list">
+<a href="/"><img src=http://i1.ciimg.com/1949/13562fccde474f1b.jpg alt="logo" width="50px" height="50px" /></a>
+</div>
+<ul class="nav-list nav">
+
+<li class="nav-list">
+<a href="/">
+<i class="fa fa-home" aria-hidden="true" ></i>
+首页
+</a>
+</li>
+
+
+
+	
+<li class="nav-list">
+<a href= /about  >
+<i class="fa fa-youtube-play" aria-hidden="true" ></i>
+关于
+</a>
+</li>
+
+
+
+<li class="nav-list">
+<a href="/atom.xml" target="_blank" >
+<i class="fa fa-feed" aria-hidden="true" ></i>
+订阅
+</a>
+</li>
+
+
+
+<li class="nav-list lightmode ">
+<a href="javascript:;" >
+<i class="fa fa-moon-o" aria-hidden="true"></i>
+关灯
+</a>
+</li>
+</ul>
+
+</header>
+        <article>
+  <div class="article-share">
+<div id="qrcode">
+	<div class="qr-text">
+	扫一扫，分享到微信
+	<i class="fa fa-window-close-o fa-2" aria-hidden="true"></i>
+	</div>
+</div>
+<ul class="share-content">
+<li >
+		<i class="fa fa-share-alt" aria-hidden="true"></i>
+	</li>
+	<li>
+		<a ><i class="fa fa-weixin" aria-hidden="true" id="toweixin"></i></a>
+	</li>
+	<li>
+		<a ><i class="fa fa-weibo" aria-hidden="true" id="toweibo"></i></a>
+	</li>
+	<li>
+		<a ><i class="fa fa-twitter" aria-hidden="true" id="totwitter"></i></a>
+	</li>
+</ul>
+</div>
+<div class="article main-body" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <!--采用相对的时间或者绝对的时间，默认相对-->
+
+<div class="article-date">
+  	<time datetime="2016-12-10T15:33:49.000Z" itemprop="datePublished">
+  	
+  	
+  	
+  	
+  	
+    
+          
+      
+      
+        
+    
+    
+    
+  	
+  		
+  	
+  	
+    
+    
+  	
+  	 	
+  	
+  		
+  	
+  	
+    
+    
+  	
+  	
+  	
+  		
+  	
+  	
+  	8个月以前发布
+
+
+  
+<div>
+阅读时长: 5分钟
+</div>
+</div>
+
+
+
+
+  </div>
+  <div class="article-inner">
+   
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      SASS 使用教程
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>俗话说，工欲善其事，必先利其器。要学习 PHP 开发，也必须先搭建能够运行 PHP 的环境。</p>
+<p>作为入门介绍，不推荐完全自己配置并搭建环境，因为自己搭建环境就得独立安装 apache、php、mysql及各种管理工具，然后再进行相关配置，这无疑增加了入门难度。</p>
+<p>推荐使用 PHP 集成环境来学习 PHP 开发，下面以 wampserver 集成开发环境为例在 32 位 windows 操作系统中介绍 PHP 环境安装。</p>
+<h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><p>wampserver 官方网站为 <a href="http://www.wampserver.com/en/" target="_blank" rel="external">http://www.wampserver.com/en/</a>，点击导航中 DOWNLOAD 下载，根据操作系统位数选取 32 位或 64 位版本下载。</p>
+<p><img src="/images/posts/phpevmt/download.png" alt="下载"></p>
+<p>下载完毕后不能立刻安装，因为要安装 wmap 还需要 VC++ 运行库的支持。详情可见 <a href="https://sourceforge.net/projects/wampserver/files/WampServer%203/WampServer%203.0.0/" target="_blank" rel="external">https://sourceforge.net/projects/wampserver/files/WampServer%203/WampServer%203.0.0/</a> 的说明。</p>
+<p>根据操作系统位数下载 VC++ 运行库。Wampserver 2.4, 2.5 和 3.0 版本需要 VC9, VC10, VC11 的运行库， 如果 PHP 版本为 7 以上，apache 版本为 2.4.17 以上，还必需 VC13, VC14 运行库。</p>
+<p><strong>VC9</strong></p>
+<p><a href="http://www.microsoft.com/en-us/download/details.aspx?id=5582" target="_blank" rel="external">Microsoft Visual C++ 2008 SP1 Redistributable Package (x86) (32bits)</a></p>
+<p><a href="http://www.microsoft.com/en-us/download/details.aspx?id=2092" target="_blank" rel="external">Microsoft Visual C++ 2008 SP1 Redistributable Package (x64) (64bits)</a></p>
+<p><strong>VC10</strong></p>
+<p><a href="http://www.microsoft.com/en-us/download/details.aspx?id=8328" target="_blank" rel="external">Microsoft Visual C++ 2010 SP1 Redistributable Package (x86)</a></p>
+<p><a href="http://www.microsoft.com/en-us/download/details.aspx?id=13523" target="_blank" rel="external">Microsoft Visual C++ 2010 SP1 Redistributable Package (x64)</a></p>
+<p><strong>VC11</strong></p>
+<p><a href="http://www.microsoft.com/en-us/download/details.aspx?id=30679" target="_blank" rel="external">Visual C++ Redistributable for Visual Studio 2012 Update 4 (x86 and x64)</a></p>
+<p><strong>VC13</strong></p>
+<p><a href="https://www.microsoft.com/en-us/download/details.aspx?id=40784" target="_blank" rel="external">Visual C++ Redistributable Packages for Visual Studio 2013</a></p>
+<p><strong>VC14</strong></p>
+<p><a href="http://www.microsoft.com/en-us/download/details.aspx?id=53840" target="_blank" rel="external">Visual C++ Redistributable Packages for Visual Studio 2015 Update 3</a></p>
+<p>特别需要注意的是，如果你的操作系统是 64 位 windows 系统，你既要安装 32 位的 VC++ 运行库，又需要安装 64 位的 VC++ 运行库，即使安装的不是 64 位的 wampserver。</p>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>先安装 VC++ 运行库，按照从小到大顺序一一安装；再安装 wampserver。按下图中各程序顺序安装即可：</p>
+<p><img src="/images/posts/phpevmt/install.png" alt="安装"></p>
+<p>注意，最好将 wampserver 安装在某个根目录下的文件夹中，比如：c:\wamp、d:\wamp 目录。确保在安装路径中不要有空格或特殊符号，不要安装在如 c:\program files\ 或 c:\program files (x86)\ 下，当然更不能安装在中文路径下了。</p>
+<p>安装完成后，运行桌面 Wampserver 快捷方式，在任务栏右下角，会出现 wampserver 管理工具图标：</p>
+<p><img src="/images/posts/phpevmt/server_icon.png" alt="安装"></p>
+<p>可以右键单击该图标，进入 Language 菜单项，选择 Chinese 将语言设置为简体中文。</p>
+<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><p>启动 Wampserver 后，如果各端口未被占用，则可以直接打开浏览器，在地址栏中输入 <a href="http://localhost" target="_blank" rel="external">http://localhost</a> 或 <a href="http://127.0.0.1" target="_blank" rel="external">http://127.0.0.1</a> 进行访问，能够打开类似如下页面，则说明 Wampserver 安装成功了：</p>
+<p><img src="/images/posts/phpevmt/page.png" alt="index.php"></p>
+<p>当然，Wampserver 默认的 apache 服务器端口为 80 端口，mysql 数据库端口为 3306 端口，如果想使用其它的端口，可以直接通过配置工具修改：</p>
+<p><img src="/images/posts/phpevmt/config.png" alt="配置端口"></p>
+
+      
+    </div>
+    
+<div class="reward" id="rewardme">
+「喜欢，就赞一个呗！(:3 」∠)_ (￣y▽￣)~*」
+
+<div class="reward-qr">
+<div class="reward-tks">
+「鼓励我写出更好的文字」
+<i class="fa fa-window-close" aria-hidden="true"></i>
+</div>
+<img src= "/img/alipay.jpg" />
+「支付宝」
+</div>
+
+
+<div class="reward-btn" >
+<div class="reward-text">赏</div>
+</div>
+
+
+</div>
+ 
+    
+    
+
+
+
+
+<div class="copyright">
+<blockquote>
+<strong>本文链接</strong>:  <a href= "http://zhanhongzj.github.io/2016/12/10/php-environment/" href="_blank" > http://zhanhongzj.github.io/2016/12/10/php-environment/ </a>
+<div>
+<strong>版权声明</strong>:本博客所有文章除特别声明外，均采用<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" target="_blank" >CC BY-NC-SA 3.0 CN许可协议</a>进行许可。转载请注明出处！
+</div>
+</blockquote>
+</div>
+
+	
+
+    
+    <div class="cat-and-tags">
+    
+  <div class="article-category">
+  	<div class="categories">
+  	<i class="fa fa-hashtag" aria-hidden="true"></i>
+    <a class="article-category-link" href="/categories/后台/">后台</a>
+  </div>  
+  </div>
+  
+
+    <div class="show-tags">
+<ul>
+
+
+
+<li>
+
+
+
+<a href=http://zhanhongzj.github.io/tags/PHP >
+<i class="fa fa-tags" aria-hidden="true"></i>
+PHP
+</a>
+</li>
+
+
+</ul>
+</div>
+
+
+    </div>
+    
+    <!--注意网易云跟贴url位置必须在网易网站配置中的网站域名之下，比如当我在localhost下设置的时候哦
+就会因为与网易网站设置的域名不匹配而导致跟贴不能显示出来
+-->
+
+
+<div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+<script src="https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
+<script>
+
+var pathname=document.location.pathname
+var cloudTieConfig = {
+  url: "http://zhanhongzj.github.io"+pathname, 
+  sourceId: "uuuu",
+  productKey: "d9ac976925074859942b446f585903fd",
+  target: "cloud-tie-wrapper"
+};
+var yunManualLoad = true;
+Tie.loader("aHR0cHM6Ly9hcGkuZ2VudGllLjE2My5jb20vcGMvbGl2ZXNjcmlwdC5odG1s", true);
+</script>
+
+  </div>
+ 
+ 
+  <!--上一篇下一篇 -->
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/01/10/gulp用法/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">上一篇</strong>
+      <div class="article-nav-title">
+        
+          gulp 使用教程
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/01/14/闭包/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">JavaScript 闭包</div>
+    </a>
+  
+</nav>
+
+  
+
+</div>
+</article>
+
+      <footer id="footer">
+  <div class="outer">
+     
+     <div id="footer-info" class="inner">
+     
+      &copy;  2015 - 2017 
+       zhanhong<br>
+
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      </br>
+      theme <a href="http://github.com/zhangolve/olive">olive</a> by zhangolve
+      </div>
+      
+      
+     
+
+
+     
+    
+  </div>
+  <div class="to-top">
+    <div class="toTop-btn">
+    <div class="toTop-text">返回顶部</div>
+  	<button class="toTop-button">
+  		<i class="fa fa-arrow-up" aria-hidden="true"></i>
+  	</button >
+    </div>
+  </div>
+</footer>
+     
+    
+
+<script src="/js/qrcode.js"></script>
+<script src="/js/script.js"></script>
+<script src="/js/lightmode.js"></script>
+
+<script src="/js/iewarn.js"></script>
+
+
+  
+</body>
+</html>

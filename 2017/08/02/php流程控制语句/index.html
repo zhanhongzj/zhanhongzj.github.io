@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>php流程控制语句 | 我的博客</title>
+  <title>我的博客</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   
   <link rel="manifest" href="/manifest.json">
@@ -105,7 +105,7 @@
     <!--采用相对的时间或者绝对的时间，默认相对-->
 
 <div class="article-date">
-  	<time datetime="2017-08-02T11:25:43.000Z" itemprop="datePublished">
+  	<time datetime="2017-08-02T11:25:43.038Z" itemprop="datePublished">
   	
   	
   	
@@ -139,12 +139,12 @@
   		
   	
   	
-  	3分钟以前发布
+  	5分钟以前发布
 
 
   
 <div>
-阅读时长: 1分钟
+阅读时长: 8分钟
 </div>
 </div>
 
@@ -155,19 +155,194 @@
   <div class="article-inner">
    
     
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      php流程控制语句
-    </h1>
-  
-
-      </header>
-    
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <p>title: PHP 流程控制语句<br>date: 2016-12-12 15:20:52<br>categories: 后台<br>tags: [PHP]<br>description: </p>
+<hr>
+<p>编程语言中的流程控制语句大都主要分为以下几类：</p>
+<ul>
+<li>顺序结构</li>
+<li>条件结构</li>
+<li>循环结构</li>
+<li>跳转语句</li>
+</ul>
+<p>顺序结构是最基本的流程控制语句，按照书写顺序从上向下依次执行，不过多赘述。</p>
+<h2 id="1-条件结构"><a href="#1-条件结构" class="headerlink" title="1. 条件结构"></a>1. 条件结构</h2><p>PHP 中的条件结构主要有以下几种：</p>
+<ul>
+<li>简单 if 语句</li>
+<li>if-else</li>
+<li>if-else if-else</li>
+<li>switch</li>
+</ul>
+<p>和大多数其它编程语言类似，先来看看条件结构的语法。</p>
+<h3 id="1-1-简单-if"><a href="#1-1-简单-if" class="headerlink" title="1.1 简单 if"></a>1.1 简单 if</h3><p>语法：</p>
+<pre><code>if (expr) {
+    // statement;
+}
+</code></pre><p>如果 expr 表达式为真，则执行 statement 语句块，否则，跳过该结构继续向后执行。</p>
+<pre><code>$num1 = 34;
+$num2 = 10;
+if ($num1 &gt; $num2){
+    echo ($num1 . &quot;&gt;&quot; . $num2 . &quot;&lt;br&gt;&quot;);
+}
+
+echo (&quot;执行结束...&quot;);
+</code></pre><h3 id="1-2-if-else"><a href="#1-2-if-else" class="headerlink" title="1.2 if-else"></a>1.2 if-else</h3><p>语法：</p>
+<pre><code>if (expr) {
+    // statement1;
+} else {
+    // statement2;
+} 
+</code></pre><p>如果条件表达式 expr 成立，则执行 if 分支语句块1，否则执行 else 语句块2。语句块1与语句块2为互斥关系，即不能都执行。</p>
+<pre><code>$num1 = 4;
+$num2 = 10;
+if ($num1 &gt; $num2){
+    echo ($num1 . &quot;&gt;&quot; . $num2 . &quot;&lt;br&gt;&quot;);
+} else {
+    echo ($num . &quot;&lt;&quot; . $num2 . &quot;&lt;br&gt;&quot;);
+}
+
+echo (&quot;执行结束...&quot;);
+</code></pre><h3 id="1-3-if-else-if-else"><a href="#1-3-if-else-if-else" class="headerlink" title="1.3 if-else if-else"></a>1.3 if-else if-else</h3><p>多重 if，语法：</p>
+<pre><code>if (expr1) {
+    // statement1;
+} else if (expr2) {
+    // statement2;
+} …… {
+    // statement n;
+} else {
+    // statement n+1;
+} 
+</code></pre><p>如果条件表达式1成立，则执行语句序列1，否则执行判断条件表达式2，表达式2成立，则执行语句序列2，否则向下判断表达式，以此类推，如果所有条件表达式都不满足，则执行最后的 else 语句块中的语句序列 n+1。</p>
+<pre><code>$num1 = 4;
+$num2 = 10;
+if ($num1 &gt; $num2){
+    echo ($num1 . &quot;&gt;&quot; . $num2 . &quot;&lt;br&gt;&quot;);
+} else if ($num1 === $num2) {
+    echo ($num . &quot;===&quot; . $num2 . &quot;&lt;br&gt;&quot;);
+} else {
+    echo ($num . &quot;&lt;&quot; . $num2 . &quot;&lt;br&gt;&quot;);
+}
+
+echo (&quot;执行结束...&quot;);
+</code></pre><h3 id="1-4-switch"><a href="#1-4-switch" class="headerlink" title="1.4 switch"></a>1.4 switch</h3><p>多重 if 在实现多分支选择时，如果是等值的多分支选择，条件判断如果有多个，则可能十分冗长，则可使用 switch 来实现等值条件的多分支选择。</p>
+<p>语法：</p>
+<pre><code>switch(variable) {
+    case value1:
+        // statement1;
+        break;
+    case value2:
+        // statement2;
+        break;
+    case ……:
+        …………
+    default:
+        // statement n;
+}
+</code></pre><p>switch 根据 variable 的值依次与各 case 后的 valueN 比较，如果不等，则继续比较下一个 case，如果相等，则执行对应语句，直到 switch 结束或遇到 <code>break;</code> 为止。default 块为缺省块，即当 variable 与所有 valueN 都不等时，执行缺省块。</p>
+<pre><code>$score = 75;
+switch((integer)($score / 10)){
+    case 10:
+    case 9:
+        echo (&quot;A&quot;);
+        break;
+    case 8:
+        echo (&quot;B&quot;);
+        break;
+    case 7:
+        echo (&quot;C&quot;);
+        break;
+    case 6:
+        echo (&quot;D&quot;);
+        break;
+    default:
+        echo (&quot;E&quot;);
+}
+</code></pre><h2 id="2-循环结构"><a href="#2-循环结构" class="headerlink" title="2. 循环结构"></a>2. 循环结构</h2><p>我们可以使用循环结构来解决重复使用某段代码或函数的问题。PHP 中循环结构主要有：while、do-while、for、foreach。</p>
+<h3 id="2-1-while"><a href="#2-1-while" class="headerlink" title="2.1 while"></a>2.1 while</h3><p>语法：</p>
+<pre><code>while (expr) {
+    // statement;
+}
+</code></pre><p>当 expr 条件为真时，执行循环体 statement 语句，循环体执行完毕后继续判断 expr 条件，重复上述步骤，直到 expr 条件为假退出循环。</p>
+<pre><code>$sum = 0;
+$currNum = 1;
+// 计算 1~100之和
+while ($currNum &lt;= 100) {
+    $sum += $currNum;
+    $currNum++;
+}
+echo (&quot;1+2+3+...+99+100=$sum&quot;);
+echo (&quot;&lt;br&gt;执行结束...&quot;);
+</code></pre><h3 id="2-2-do-while"><a href="#2-2-do-while" class="headerlink" title="2.2 do-while"></a>2.2 do-while</h3><p>语法：</p>
+<pre><code>do {
+    // statement;
+} while (expr);
+</code></pre><p>先无论如何执行一次循环体的操作，再判断条件，在条件满足的情况下，继续执行循环体操作，然后判断条件，重复，直到条件为假退出循环。</p>
+<pre><code>$sum = 0;
+$currNum = 1;
+do {
+    $sum += $currNum;
+    $currNum++;
+} while ($currNum &lt;= 100);
+echo (&quot;1+2+3+...+99+100=$sum&quot;);
+echo (&quot;&lt;br&gt;执行结束...&quot;);
+</code></pre><h3 id="2-3-for"><a href="#2-3-for" class="headerlink" title="2.3 for"></a>2.3 for</h3><p>语法：</p>
+<pre><code>for (expr1; expr2; expr3) {
+    // statement;
+}
+</code></pre><p>执行流程说明：</p>
+<ol>
+<li>执行变量初始化表达式 expr1，通常这个变量是用于循环条件的控制；</li>
+<li>执行循环条件判断 expr2</li>
+<li>循环条件满足，则执行循环体操作，循环条件不满足，则跳到第 6 步；</li>
+<li>执行变量更新表达式 expr3，通常是循环变量更新，以构建退出循环的条件；</li>
+<li>回到第 2 步；</li>
+<li><p>退出循环结构。</p>
+<p> // 计算 10!<br> $factorial = 1; // 保存阶乘结果<br> for ($i = 10; $i &gt;= 1; $i–) {</p>
+<pre><code>$factorial *= $i;
+</code></pre><p> }<br> echo (“10! = $factorial”);</p>
+</li>
+</ol>
+<h3 id="2-4-foreach"><a href="#2-4-foreach" class="headerlink" title="2.4 foreach"></a>2.4 foreach</h3><p>foreach 常用于数组元素遍历。</p>
+<p>语法：</p>
+<pre><code>foreach (array_expression as $value) {
+    // statement;
+} 
+// 或
+foreach (array_expression as $key=&gt;$value) {
+    // statement;
+}
+</code></pre><p>$value 表示遍历到的元素值，$key 表示遍历到的索引。</p>
+<p>示例1：</p>
+<pre><code>$arr = array(38,29,64,15,88);
+foreach($arr as $item) {
+    echo &quot;$item&lt;br&gt;&quot;;
+}
+</code></pre><p>示例2：</p>
+<pre><code>$arr = array(38,29,64,15,88);
+foreach ($arr as $key=&gt;$value){
+    echo &quot;$key = $value&lt;br&gt;&quot;;
+}
+</code></pre><h2 id="3-跳转语句"><a href="#3-跳转语句" class="headerlink" title="3. 跳转语句"></a>3. 跳转语句</h2><h3 id="3-1-break"><a href="#3-1-break" class="headerlink" title="3.1 break"></a>3.1 break</h3><p>在使用循环结构时，有时会遇到循环次数不定的情况，但条件表达式不好表示，这时可以固定将条件表达式置为 true，人为设置死循环。为了能够在循环体中满足一定条件的时候还是能够退出循环，可以使用 <code>break;</code> 语句。</p>
+<pre><code>while (true) {
+    $tmp = rand(1, 20);
+    echo $tmp . &quot; &quot;;
+    if ($tmp === 10) {
+        echo &quot;&lt;div&gt;变量值终于为10了&lt;/div&gt;&quot;;
+        break;
+    }
+}
+</code></pre><p>使用 <code>break;</code> 不仅可以跳出当前循环，还可以指定跳出几层循环，格式为 <code>break $num;</code>，但不推荐使用。</p>
+<h3 id="3-2-continue"><a href="#3-2-continue" class="headerlink" title="3.2 continue"></a>3.2 continue</h3><p>如果只想终止当前一次循环，还能够继续判断条件执行下一次循环，那么可以使用 continue。</p>
+<pre><code>$arr = array(3,5,2,1,8,9,6);
+for ($i = 0; $i &lt; 7; $i++) {
+    if ($i % 2 == 0)
+        continue;
+    echo &quot;输出：$arr[$i]&lt;br&gt;&quot;;
+}
+</code></pre><p>使用 <code>continue $num;</code> 和 break 类似，可以跳出几层循环，但这样一来，对程序逻辑的理解跳跃性就比较大，不推荐使用。</p>
+<h2 id="4-小结"><a href="#4-小结" class="headerlink" title="4. 小结"></a>4. 小结</h2><p>流程控制语句在程序中是必不可少的，也是变化丰富的。再复杂的业务逻辑，都是通过流程控制语句的拆分组合演化而来的，所以对于流程控制语句，我们一定要不断练习和总结，掌握住一套属于自己的方法和技巧。</p>
+
       
     </div>
     

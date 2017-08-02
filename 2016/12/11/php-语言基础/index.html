@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>PHP 语言基础 | 我的博客</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  <link rel="manifest" href="/manifest.json">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content=我的博客   >
+  <link rel="apple-touch-icon" href="img/icons/152.png">
+  
+  
+  <meta name="theme-color" content="#0c0c1f">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+    <link rel="alternate" href="/atom.xml" title="我的博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body class=" ">
+  	   <div class="iewarn" id="iewarn">
+<div>---------!!!!!!!!!!!!!!!!-----------------</div>
+检测到您正在使用IE9或更低版本浏览器访问本站，为了您的阅读体验，本站推荐您使用<a href="https://www.google.com/chrome/" target="_blank" >Chrome浏览器</a> 或者<a href="https://www.mozilla.org/en-US/firefox/products/" target="_blank" >Firefox浏览器 </a> 对本站进行访问
+
+</div>
+      <header class="main-header">
+
+<div class="logo nav-list">
+<a href="/"><img src=http://i1.ciimg.com/1949/13562fccde474f1b.jpg alt="logo" width="50px" height="50px" /></a>
+</div>
+<ul class="nav-list nav">
+
+<li class="nav-list">
+<a href="/">
+<i class="fa fa-home" aria-hidden="true" ></i>
+首页
+</a>
+</li>
+
+
+
+	
+<li class="nav-list">
+<a href= /about  >
+<i class="fa fa-youtube-play" aria-hidden="true" ></i>
+关于
+</a>
+</li>
+
+
+
+<li class="nav-list">
+<a href="/atom.xml" target="_blank" >
+<i class="fa fa-feed" aria-hidden="true" ></i>
+订阅
+</a>
+</li>
+
+
+
+<li class="nav-list lightmode ">
+<a href="javascript:;" >
+<i class="fa fa-moon-o" aria-hidden="true"></i>
+关灯
+</a>
+</li>
+</ul>
+
+</header>
+        <article>
+  <div class="article-share">
+<div id="qrcode">
+	<div class="qr-text">
+	扫一扫，分享到微信
+	<i class="fa fa-window-close-o fa-2" aria-hidden="true"></i>
+	</div>
+</div>
+<ul class="share-content">
+<li >
+		<i class="fa fa-share-alt" aria-hidden="true"></i>
+	</li>
+	<li>
+		<a ><i class="fa fa-weixin" aria-hidden="true" id="toweixin"></i></a>
+	</li>
+	<li>
+		<a ><i class="fa fa-weibo" aria-hidden="true" id="toweibo"></i></a>
+	</li>
+	<li>
+		<a ><i class="fa fa-twitter" aria-hidden="true" id="totwitter"></i></a>
+	</li>
+</ul>
+</div>
+<div class="article main-body" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <!--采用相对的时间或者绝对的时间，默认相对-->
+
+<div class="article-date">
+  	<time datetime="2016-12-11T12:09:29.000Z" itemprop="datePublished">
+  	
+  	
+  	
+  	
+  	
+    
+          
+      
+      
+        
+    
+    
+    
+  	
+  		
+  	
+  	
+    
+    
+  	
+  	 	
+  	
+  		
+  	
+  	
+    
+    
+  	
+  	
+  	
+  		
+  	
+  	
+  	8个月以前发布
+
+
+  
+<div>
+阅读时长: 17分钟
+</div>
+</div>
+
+
+
+
+  </div>
+  <div class="article-inner">
+   
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      PHP 语言基础
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="1-PHP-标记"><a href="#1-PHP-标记" class="headerlink" title="1. PHP 标记"></a>1. PHP 标记</h2><p>PHP 文件的默认扩展名为 .php，在 PHP 文件中通常包含 HTML 标签和一些 PHP 脚本代码。我们可以将 PHP 脚本放在文档的任何位置，但为了与 HTML 元素区分开，需要使用一些特殊的标记来进行区分。</p>
+<h3 id="1-1-标准风格"><a href="#1-1-标准风格" class="headerlink" title="1.1 标准风格"></a>1.1 标准风格</h3><p>将 PHP 脚本用 <code>&lt;?php ?&gt;</code> 的标记包含起来：</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;第一个 PHP 页面&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;第一个 PHP 页面&lt;/h1&gt;
+    &lt;?php
+        echo &quot;hello world...&quot;;
+    ?&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><p>标准风格的标记是推荐使用的标记，在 HTML、XHTML、XML 中都可以使用。</p>
+<p>echo 主要用于输出内容，向页面输出时，可包含 HTML 标签。</p>
+<h3 id="1-2-脚本风格"><a href="#1-2-脚本风格" class="headerlink" title="1.2 脚本风格"></a>1.2 脚本风格</h3><p>使用 <code>&lt;script language=&quot;php&quot;&gt;&lt;/script&gt;</code> 标记：</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;第一个 PHP 页面&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;第一个 PHP 页面&lt;/h1&gt;
+    &lt;script language=&quot;php&quot;&gt;
+        echo &quot;这是脚本风格...&quot;;
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><h3 id="1-3-简短风格"><a href="#1-3-简短风格" class="headerlink" title="1.3 简短风格"></a>1.3 简短风格</h3><p>使用 <code>&lt;? ?&gt;</code> 标记：</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;第一个 PHP 页面&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;第一个 PHP 页面&lt;/h1&gt;
+    &lt;? echo &quot;这是简短风格...&quot;; ?&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><h3 id="1-4-asp-风格"><a href="#1-4-asp-风格" class="headerlink" title="1.4 asp 风格"></a>1.4 asp 风格</h3><p>使用 <code>&lt;% %&gt;</code> 标记：</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;第一个 PHP 页面&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;第一个 PHP 页面&lt;/h1&gt;
+    &lt;%
+        echo &quot;这是 asp 风格...&quot;;
+    %&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><p>注意，要使用简短风格和 asp 风格，还需要到 php.ini 文件中进行配置，将 short_open_tag、asp_tags 设置为 ON，再重新服务器，但还是推荐标准风格。</p>
+<h2 id="2-注释"><a href="#2-注释" class="headerlink" title="2. 注释"></a>2. 注释</h2><p>注释，即解释说明，主要用于说明代码的编写者、编写时间、逻辑、用意等，方便代码阅读者进行阅读。注释不会影响程序的正常执行，在执行过程中，注释内容会被忽略。</p>
+<p>PHP 中可以使用的注释有三种：</p>
+<ol>
+<li>//：单行注释，注释范围从 // 开始，到行尾结束</li>
+<li>/<em> </em>/：多行注释，以 /<em> 开头，</em>/ 结束，包含在开始与结束标记之间的内容为注释内容</li>
+<li>#：shell注释，类似于单行注释</li>
+</ol>
+<p>注意，多行注释不能出现嵌套使用，单行注释中也不要出现 <code>?&gt;</code> 这样的标记，解释器会误以为 PHP 脚本结束了。</p>
+<h2 id="3-标识符与关键字"><a href="#3-标识符与关键字" class="headerlink" title="3. 标识符与关键字"></a>3. 标识符与关键字</h2><p>标识符通常是我们自己定义如变量名、类名、方法名时用到的标记。关键字是 PHP 语言本身特有的有特殊含义的单词标记，通过这些有特殊含义的单词组织 PHP 的程序逻辑。</p>
+<p>自定义标识符名时，通常遵循以下规则：</p>
+<ul>
+<li>可以包含字母、数字、下划线</li>
+<li>不能以数字开头</li>
+<li>区分字母大小写</li>
+<li>不能使用关键字</li>
+</ul>
+<h2 id="4-变量"><a href="#4-变量" class="headerlink" title="4. 变量"></a>4. 变量</h2><p>变量是在内存中数据存储的区域，与其它语言一样，变量也具有三大要素：变量数据类型、变量名与变量值。</p>
+<h3 id="4-1-变量定义"><a href="#4-1-变量定义" class="headerlink" title="4.1 变量定义"></a>4.1 变量定义</h3><p>PHP 中变量命名规则为：</p>
+<ul>
+<li>变量以 $ 符号开始，后面跟着变量的名称</li>
+<li>变量名必须以字母或者下划线字符开始</li>
+<li>变量名只能包含字母数字字符以及下划线（A-z、0-9 和 _ ）</li>
+<li>变量名不能包含空格</li>
+<li>变量名是区分大小写的（$y 和 $Y 是两个不同的变量）</li>
+</ul>
+<p>PHP 和 JavaScript 类似，也是一门弱类型的语言，即在定义变量时不需要指明变量数据类型，变量的类型在赋值时自动确定。这也是弱类型语言与强类型语言的差别。</p>
+<p>示例：</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;第一个 PHP 页面&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;第一个 PHP 页面&lt;/h1&gt;
+    &lt;?php
+        $txt=&quot;Hello world!&quot;;
+        $x=5;
+        $y=10.5;
+
+        echo &quot;x = $x, y = $y, txt = $txt&quot;;
+    ?&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><h3 id="4-2-变量作用域"><a href="#4-2-变量作用域" class="headerlink" title="4.2 变量作用域"></a>4.2 变量作用域</h3><p>变量必须在有效范围内使用，如果变量超出其有效范围，也就推动了变量的意义。变量作用域如下：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">作用域</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">局部变量</td>
+<td style="text-align:left">在函数内部定义的变量，其作用域在所在函数内部</td>
+</tr>
+<tr>
+<td style="text-align:left">全局变量</td>
+<td style="text-align:left">定义在所有函数外的变量，其作用域是整个 PHP 文件，但在用户自定义函数内部是不可用的。<br>如果希望在用户自定义函数内部使用到全局变量，则要使用 global 关键字声明全局变量</td>
+</tr>
+<tr>
+<td style="text-align:left">静态变量</td>
+<td style="text-align:left">能够在函数调用结束后仍保留变量值，当再次回到其作用域时，又可以继续使用原来的值。<br>而一般变量是在函数调用结束后，其存储的数据值即被清除，所占的内存空间也被释放。<br>使用静态变量时，先要用关键字 static 来声明变量，把关键字 static 放在要定义的变量之前</td>
+</tr>
+</tbody>
+</table>
+<p>局部变量与全局变量：</p>
+<pre><code>$test = &quot;函数外部的 test 变量...&quot;;
+
+function fn() {
+    $test = &quot;fn 函数内部的 test 变量...&quot;;
+    echo &quot;fn函数内部输出：$test&lt;br&gt;&quot;;
+    global $test;
+    $test = &quot;修改了外部的 test 变量...&quot;;
+    echo &quot;fn函数内部输出：$test&lt;br&gt;&quot;;
+}
+
+fn();
+echo &quot;函数外部输出：$test&lt;br&gt;&quot;;
+</code></pre><p>执行结果：</p>
+<pre><code>fn函数内部输出：fn 函数内部的 test 变量...
+fn函数内部输出：修改了外部的 test 变量...
+函数外部输出：修改了外部的 test 变量...
+</code></pre><p>局部变量与静态变量：</p>
+<pre><code>function fn1(){
+    static $num = 0;
+    $num += 1;
+    echo &quot;fn1 : num = $num &quot;;
+}
+
+function fn2(){
+    $num = 0;
+    $num += 1;
+    echo &quot;fn2 : num = $num &quot;;
+}
+
+for($i = 0; $i &lt; 5; $i++) {
+    fn1();
+}
+echo &quot;&lt;br&gt;&quot;;
+for($i = 0; $i &lt; 5; $i++) {
+    fn2();
+}
+</code></pre><p>执行结果：</p>
+<pre><code>fn1 : num = 1 fn1 : num = 2 fn1 : num = 3 fn1 : num = 4 fn1 : num = 5 
+fn2 : num = 1 fn2 : num = 1 fn2 : num = 1 fn2 : num = 1 fn2 : num = 1
+</code></pre><h2 id="5-数据类型"><a href="#5-数据类型" class="headerlink" title="5. 数据类型"></a>5. 数据类型</h2><p>PHP 支持 8 种数据类型，这 8 种数据类型又可分为标量类型、复合类型与特殊类型。</p>
+<ul>
+<li>标量类型：boolean、integer、float、string</li>
+<li>复合类型：array、object</li>
+<li>特殊类型：resource、null</li>
+</ul>
+<h3 id="5-1-标量类型"><a href="#5-1-标量类型" class="headerlink" title="5.1 标量类型"></a>5.1 标量类型</h3><table>
+<thead>
+<tr>
+<th style="text-align:left">类型</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">boolean</td>
+<td style="text-align:left">布尔类型，取值为 true 或 false</td>
+</tr>
+<tr>
+<td style="text-align:left">integer</td>
+<td style="text-align:left">整数，可以是正数或负数</td>
+</tr>
+<tr>
+<td style="text-align:left">float</td>
+<td style="text-align:left">浮点型，用于存储数字，它有小数位</td>
+</tr>
+<tr>
+<td style="text-align:left">string</td>
+<td style="text-align:left">字符串，存储连续的字符序列</td>
+</tr>
+</tbody>
+</table>
+<p><strong>boolean</strong></p>
+<p>boolean 布尔型通常用于表示真假，它有两个取值：true、false，是 PHP 中常用的类型之一。boolean 类型通常用在条件结构或循环结构的条件表达式中。</p>
+<p>在某些情况下，其它类型也可以自动向 boolean 类型转换，通常这些会转为 boolean 型的 false：0、0.0、”0”、””(空字符串)、未赋值的数组……</p>
+<p><strong>integer</strong></p>
+<p>integer 为整型类型，只能表示整数，可以是十进制、八进制、十六进制。八进制以 0 开头，十六进制以 0x 开头。32 位操作系统中，integer 表示数字在 -2^31 至 2^31 - 1 范围内。在为变量赋值时，如果赋值数字超过整数的范围（称为溢出），将会被当作 float 浮点型数据处理。</p>
+<p><strong>float</strong></p>
+<p>float 为浮点数类型，既可用于存放整数，又可用于存放小数。在 32 位操作系统中，float 表示数字在 1.7E-308 至 1.7E+308 范围内。 浮点数写法可以有两种，平时常用的是如 3.14 之类的写法，也可使用如 7.96E+5 的写法（科学计数法）。PHP 4.0 之前，浮点型为 double（双精度浮点数），两者之间没有区别。</p>
+<p><strong>string</strong></p>
+<p>在 PHP 中，有三种表示字符串的方式，分别是使用单引号（’）、双引号（”）或界定符（&lt;&lt;&lt;）来表示。</p>
+<p>单引号（’）与双引号（”）的区别在于，单引号中如果包含变量会按普通字符串输出，而双引号中如果包含变量会自动替换成变量实际值输出。</p>
+<p>界定符是从 PHP 4.0 开始支持的，使用时在界定符后跟一个标识符，然后是字符串内容，字符串内容结束后要以同样的标识符标记，如：</p>
+<pre><code>echo &lt;&lt;&lt;str
+    这是一个字符串内容
+str;
+</code></pre><p>&lt;&lt;&lt; 后跟的 str 就是标识符，结束标识符必须另起一行，并且不允许有空格，也不允许在其前后有任何空格或其它符号。</p>
+<h3 id="5-2-复合类型"><a href="#5-2-复合类型" class="headerlink" title="5.2 复合类型"></a>5.2 复合类型</h3><table>
+<thead>
+<tr>
+<th style="text-align:left">类型</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">array</td>
+<td style="text-align:left">一组类型相同的值的集合</td>
+</tr>
+<tr>
+<td style="text-align:left">object</td>
+<td style="text-align:left">类的实例，通常使用 new 创建</td>
+</tr>
+</tbody>
+</table>
+<p><strong>array</strong></p>
+<p>数组是一组数据的集合。通过数组，可以将一系列数据组织起来，形成一个可操作的整体。</p>
+<p>数组中的每个数据称为一个元素，元素通常包括索引和值两个部分，索引可为数字或字符串，值可以取多种数据类型。</p>
+<p>定义数组的语法为：</p>
+<pre><code>$arr = (value1, value2, value3, ...); // 或
+$arr[key] = value; // 或
+$arr = array(key1=&gt;value1, key2=&gt;value2, ...);
+</code></pre><p>key 为数组元素的索引，value 是数组元素值。声明数组后，数组中元素个数也可以动态改变，数组长度也会自动更新。</p>
+<p><strong>object</strong></p>
+<p>对象类型稍后介绍。</p>
+<h3 id="5-3-特殊类型"><a href="#5-3-特殊类型" class="headerlink" title="5.3 特殊类型"></a>5.3 特殊类型</h3><table>
+<thead>
+<tr>
+<th style="text-align:left">类型</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">resource</td>
+<td style="text-align:left">资源也称句柄，保存的是到外部资源的一个引用，是通过专门的函数来建立和使用的</td>
+</tr>
+<tr>
+<td style="text-align:left">null</td>
+<td style="text-align:left">一个特殊的值，表示变量没有值，唯一值为null，通常用于表示对象的空</td>
+</tr>
+</tbody>
+</table>
+<h3 id="5-4-数据类型转换"><a href="#5-4-数据类型转换" class="headerlink" title="5.4 数据类型转换"></a>5.4 数据类型转换</h3><p>PHP 的数据类型转换是在待转换的变量前加上小括号的方式来转换，如：</p>
+<pre><code>$num = 5;
+$b = (boolean)$num;
+echo $num;
+</code></pre><p>注意，转换为 boolean 类型时，null、0、未赋值的变量或数组被转换为 false，其它的转换为 true；转换成整型时，布尔型的 false 转换为 0，true 转换为 1，浮点型的小数部分被丢弃，字符串型如果以数字开头就截取到非数字位，否则输出 0。</p>
+<p>也可以使用 settype() 函数来转换：</p>
+<pre><code>boolean settype(mixed var, string type)
+</code></pre><p>var 为待转换的变量，type 为转换的数据类型，如果转换成功，settype() 返回 true，否则返回 false。</p>
+<p>如：</p>
+<pre><code>$str = &quot;8899.283&quot;;
+$b = settype($str, &quot;integer&quot;);
+$num = $str*2;
+echo $num;
+</code></pre><p>使用类似 (boolean)、(integer) 的方式转换，原变量的值不会发生改变，但使用 settype() 函数转换后，原变量会被改变为转换后的值。</p>
+<h3 id="5-5-类型检测"><a href="#5-5-类型检测" class="headerlink" title="5.5 类型检测"></a>5.5 类型检测</h3><p>PHP 内置了用于检测数据类型的函数：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">函数</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">is_boolean</td>
+<td style="text-align:left">检测是否为 boolean 类型</td>
+</tr>
+<tr>
+<td style="text-align:left">is_string</td>
+<td style="text-align:left">检测是否为 string 类型</td>
+</tr>
+<tr>
+<td style="text-align:left">is_float/is_double</td>
+<td style="text-align:left">检测是否为 float 类型</td>
+</tr>
+<tr>
+<td style="text-align:left">is_integer/is_int</td>
+<td style="text-align:left">检测是否为 integer 类型</td>
+</tr>
+<tr>
+<td style="text-align:left">is_null</td>
+<td style="text-align:left">检测是否为 null</td>
+</tr>
+<tr>
+<td style="text-align:left">is_array</td>
+<td style="text-align:left">检测是否为 array 类型</td>
+</tr>
+<tr>
+<td style="text-align:left">is_object</td>
+<td style="text-align:left">检测是否为 object 类型</td>
+</tr>
+<tr>
+<td style="text-align:left">is_numeric</td>
+<td style="text-align:left">检测是否为数字或由数字组成的字符串</td>
+</tr>
+</tbody>
+</table>
+<h2 id="6-常量"><a href="#6-常量" class="headerlink" title="6. 常量"></a>6. 常量</h2><p>常量是一个简单值的标识符，常量值被定义后，在脚本的其他任何地方都不能被改变。一个常量名由英文字母、下划线、和数字组成，但数字不能作为首字母出现。 (常量名不需要加 $ 修饰符)。</p>
+<p>设置常量需要使用到 define() 函数：</p>
+<pre><code>bool define ( string $name , mixed $value [, bool $case_insensitive = false ] )
+</code></pre><p>参数 name 为必选参数，表示常量名称，即标识符。value 也为必选参数，表示常量的值。case_insensitive 是可选参数，如果设置为 true，该常量则大小写不敏感，该参数默认是大小写敏感的。</p>
+<pre><code>// 区分大小写的常量名
+define(&quot;GREETING&quot;, &quot;欢迎访问小明的家&quot;);
+echo GREETING;    // 输出 &quot;欢迎访问小明的家&quot;
+echo &apos;&lt;br&gt;&apos;;
+echo greeting;   // 输出 &quot;greeting&quot;
+// 不区分大小写的常量名
+define(&quot;WELCOME&quot;, &quot;欢迎访问小明的家&quot;, true);
+echo welcome;  // 输出 &quot;欢迎访问小明的家&quot;
+</code></pre><p>常量在定义后，默认是全局变量，可以在整个运行的脚本的任何地方使用。以下实例演示了在函数内使用常量，即便常量定义在函数外也可以正常使用常量：</p>
+<pre><code>define(&quot;GREETING&quot;, &quot;欢迎访问小明的家&quot;);
+
+function myTest() {
+    echo GREETING;
+}
+
+myTest();    // 输出 &quot;欢迎访问小明的家&quot;
+</code></pre><h2 id="7-运算符"><a href="#7-运算符" class="headerlink" title="7. 运算符"></a>7. 运算符</h2><p>PHP 中的运算符和其它语言也是类似的。</p>
+<p><strong>算术运算符</strong></p>
+<p>主要用于处理算术运算，在数字的处理中应用最多。有 +(加)、-(减)、*(乘)、/(除)、%(模)、++(自增)、–(自减) 运算。</p>
+<p><strong>字符串运算符</strong></p>
+<p>字符串运算符只有一个，即英文半角状态下的小圆点（.），它的作用是将两个字符串连接起来，形成一个新的字符串，其它语言中多用 “+” 作字符串连接，但在 PHP 中 “+” 只用于算术运算。</p>
+<p><strong>赋值运算符</strong></p>
+<p>=，用于将运算符右边的表达式值赋值给左边的变量保存。</p>
+<p><strong>复合运算符</strong></p>
+<p>+=、-=、*=、/=、%=、.=，作用是将运算符左边的变量与右边的表达式作第一个运算符号的运算操作，将运算结果保存回左边的变量中。</p>
+<p><strong>比较运算符</strong></p>
+<p>主要用于大小比较，有：&gt;、&lt;、&gt;=、&lt;=、==、===、!=、!==。== 与 === 号是相等比较，前者是比较值相同即可，如果类型不一致，尝试类型转换后再比较，而后者是恒等比较，即类型不一致，直接不相等。</p>
+<p><strong>逻辑运算符</strong></p>
+<p>&amp;&amp; 或 and，表示逻辑与，两个表达式都为真时结果为真。</p>
+<p>|| 或 or，表示逻辑或，两个表达式只要有一个为真，结果为真。</p>
+<p>xor，表示逻辑异或，两个表达式一真一假时，结果为真。</p>
+<p>!，表示逻辑非，取逻辑相反值。</p>
+<p><strong>三目运算符</strong></p>
+<p>?:，作用是根据一个表达式在另两个表达式中选择一个。? 问题前为条件的表达式，? 问题与 : 冒号之间是条件为真时返回的表达式，而 : 冒号后是条件为假时返回的表达式。</p>
+<p><strong>位运算符</strong></p>
+<p>位运算符主要用于对二进制数按位进行运算，&amp; 表示按位与，| 表示按位或，^ 表示按位异或，~ 表示按位取反，&lt;&lt; 表示向左移位，&gt;&gt; 表示向右移位。实际开发中，除非涉及算法优化，否则还是很少用到位运算符。</p>
+<p><strong>错误控制运算符</strong></p>
+<p>错误控制运算符可以对程序中出现错误的表达式进行操作，进而对错误信息进行屏蔽，使用方法是在可能出现错误的表达式前添加 @ 符号。@ 仅仅是对错误信息进行屏蔽，不会真正解决错误问题，不推荐使用。</p>
+<p>这些运算符如果结合到一起使用，同样存在优先级的问题，但是这么多运算符，我们要去一一的记优先级的话，也显得很繁琐，所以实际应用的时候，如果不清楚优先级的情况，可适当使用括号来区分。</p>
+<h2 id="8-函数"><a href="#8-函数" class="headerlink" title="8. 函数"></a>8. 函数</h2><p>实际开发中，会经常遇到重复的操作，如数据添加、修改、查询、字符串操作等，如果每个操作都重复去编写代码，不仅写起来很头痛，如果后期代码要维护、修改，那就会更头痛了。我们可以使用函数来解决这个问题，<strong>函数就是可以被重复使用的代码块</strong>。</p>
+<h3 id="8-1-函数定义与调用"><a href="#8-1-函数定义与调用" class="headerlink" title="8.1 函数定义与调用"></a>8.1 函数定义与调用</h3><p>创建函数的语法结构为：</p>
+<pre><code>function fn_name($var1, $var2, ...) {
+    // main_body;
+}
+</code></pre><p>function 是声明函数的关键字，fn_name 为函数名，$var1, $var2, … 为函数形式参数列表，main_body 为函数主体，实现功能的代码块就写在主体中。</p>
+<p>函数定义之后，不会主动起作用，需要经过调用才能发挥作用。函数调用与其它语言类似，通过函数名引用，并传递正确的实际参数即可。</p>
+<pre><code>function area($width, $height) {
+    echo &quot;矩形宽为：$width ，高为：$height ，面积为：&quot; . $width * $height;
+}
+
+area(3, 5);
+</code></pre><p>结果：</p>
+<pre><code>矩形宽为：5 ，高为：8 ，面积为：40
+</code></pre><h3 id="8-2-函数参数"><a href="#8-2-函数参数" class="headerlink" title="8.2 函数参数"></a>8.2 函数参数</h3><p>在函数体内部进行运算时，所需要的数据如果函数内不能解决数据来源问题，或不能通过全局变量解决时，所需要的额外数据就可以通过参数传递。函数定义时给定的参数列表称为形式参数列表，简称形参；函数调用时给定的参数列表称为实际参数列表，简称实参。</p>
+<p>在 PHP 中，参数的传递的方式有：按值传递，按引用传递，默认参数。</p>
+<p><strong>1. 按值传递</strong></p>
+<p>将实参的值赋值到对应的形参变量中，在函数内部的操作仅针对形参变量进行，操作结果不会影响到实参，这种参数传递是按值传递。如：</p>
+<pre><code>function area($width, $height) {
+    echo &quot;矩形宽为：$width ，高为：$height ，面积为：&quot; . $width * $height;
+    // 运算后修改形参值
+    $width += 5;
+    $height += 3;
+}
+
+$w = 5;
+$h = 8;
+area($w, $h);
+echo &quot;&lt;br&gt;函数调用结束后：\$w = $w ，\$h = $h&quot;;
+</code></pre><p>执行结果：</p>
+<pre><code>矩形宽为：5 ，高为：8 ，面积为：40
+函数调用结束后：$w = 5 ，$h = 8
+</code></pre><p><strong>2. 按引用传递</strong></p>
+<p>按引用传递就是将实参的内存地址传递给形参，这样，在函数体内部所有对形参的操作都会影响到实参的值。引用传递是在函数定义时就在形参前添加 “&amp;” 符号，调用时直接传递实参变量即可。</p>
+<pre><code>function area(&amp;$width, &amp;$height) {
+    echo &quot;矩形宽为：$width ，高为：$height ，面积为：&quot; . $width * $height ;
+    // 运算后修改形参值
+    $width += 5;
+    $height += 3;
+}
+
+$w = 5;
+$h = 8;
+area($w, $h);
+echo &quot;&lt;br&gt;函数调用结束后：\$w = $w ，\$h = $h&quot;;
+</code></pre><p>执行结果：</p>
+<pre><code>矩形宽为：5 ，高为：8 ，面积为：40
+函数调用结束后：$w = 10 ，$h = 11
+</code></pre><p><strong>3. 默认参数</strong></p>
+<p>默认参数也叫可选参数，即在函数调用时，参数可以不传递，在函数体内部对未传递的参数取一个默认值。在函数声明时可以指定某个参数为可选参数，将可选参数放在参数列表末尾，并为其指定默认值。</p>
+<pre><code>function area($radius, $pi=3.14) {
+    echo &quot;半径为 $radius 的圆面积为：&quot; . $pi * $radius * $radius . &quot;&lt;br&gt;&quot;;
+}
+
+area(2);
+
+area(2, 3.14159);
+</code></pre><p>执行结果： </p>
+<pre><code>半径为 2 的圆面积为：12.56
+半径为 2 的圆面积为：12.56636
+</code></pre><h3 id="8-3-返回值"><a href="#8-3-返回值" class="headerlink" title="8.3 返回值"></a>8.3 返回值</h3><p>如果需要在函数外部使用到函数体中数据处理的结果，则需要使用返回值。PHP 使用 return 语句来将返回值传递给调用者。</p>
+<p>return 的作用是将函数的值返回给函数的调用者，即将程序控制权返回到调用者的作用域，所以函数体内执行了 return 语句，则结束了函数的调用。如果在全局作用域内使用了 return 语句，那么将终止脚本的执行。</p>
+<pre><code>function calc($salary, $tax=0.03, $minus=0){
+    return $salary - (($salary - 3500) * $tax - $minus);
+}
+
+$income = calc(5000);
+echo &quot;月工资 5000，到手：$income&quot;;
+</code></pre><p>执行结果：</p>
+<pre><code>月工资 5000，到手：4955
+</code></pre><h2 id="9-小结"><a href="#9-小结" class="headerlink" title="9. 小结"></a>9. 小结</h2><p>以上主要简单介绍了 PHP 语言的基础知识，当然对于初学者来说，这些内容并不十分详实，适合有一定编程基础的读者阅读。待时间允许再做详细整理…</p>
+
+      
+    </div>
+    
+<div class="reward" id="rewardme">
+「喜欢，就赞一个呗！(:3 」∠)_ (￣y▽￣)~*」
+
+<div class="reward-qr">
+<div class="reward-tks">
+「鼓励我写出更好的文字」
+<i class="fa fa-window-close" aria-hidden="true"></i>
+</div>
+<img src= "/img/alipay.jpg" />
+「支付宝」
+</div>
+
+
+<div class="reward-btn" >
+<div class="reward-text">赏</div>
+</div>
+
+
+</div>
+ 
+    
+    
+
+
+
+
+<div class="copyright">
+<blockquote>
+<strong>本文链接</strong>:  <a href= "http://zhanhongzj.github.io/2016/12/11/php-语言基础/" href="_blank" > http://zhanhongzj.github.io/2016/12/11/php-语言基础/ </a>
+<div>
+<strong>版权声明</strong>:本博客所有文章除特别声明外，均采用<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" target="_blank" >CC BY-NC-SA 3.0 CN许可协议</a>进行许可。转载请注明出处！
+</div>
+</blockquote>
+</div>
+
+	
+
+    
+    <div class="cat-and-tags">
+    
+  <div class="article-category">
+  	<div class="categories">
+  	<i class="fa fa-hashtag" aria-hidden="true"></i>
+    <a class="article-category-link" href="/categories/前端/">前端</a>
+  </div>  
+  </div>
+  
+
+    <div class="show-tags">
+<ul>
+
+
+
+<li>
+
+
+
+<a href=http://zhanhongzj.github.io/tags/PHP >
+<i class="fa fa-tags" aria-hidden="true"></i>
+PHP
+</a>
+</li>
+
+
+</ul>
+</div>
+
+
+    </div>
+    
+    <!--注意网易云跟贴url位置必须在网易网站配置中的网站域名之下，比如当我在localhost下设置的时候哦
+就会因为与网易网站设置的域名不匹配而导致跟贴不能显示出来
+-->
+
+
+<div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+<script src="https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
+<script>
+
+var pathname=document.location.pathname
+var cloudTieConfig = {
+  url: "http://zhanhongzj.github.io"+pathname, 
+  sourceId: "uuuu",
+  productKey: "d9ac976925074859942b446f585903fd",
+  target: "cloud-tie-wrapper"
+};
+var yunManualLoad = true;
+Tie.loader("aHR0cHM6Ly9hcGkuZ2VudGllLjE2My5jb20vcGMvbGl2ZXNjcmlwdC5odG1s", true);
+</script>
+
+  </div>
+ 
+ 
+  <!--上一篇下一篇 -->
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/01/10/gulp用法/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">上一篇</strong>
+      <div class="article-nav-title">
+        
+          gulp 使用教程
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/12/10/php-environment/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">PHP 集成环境搭建</div>
+    </a>
+  
+</nav>
+
+  
+
+</div>
+</article>
+
+      <footer id="footer">
+  <div class="outer">
+     
+     <div id="footer-info" class="inner">
+     
+      &copy;  2015 - 2017 
+       zhanhong<br>
+
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      </br>
+      theme <a href="http://github.com/zhangolve/olive">olive</a> by zhangolve
+      </div>
+      
+      
+     
+
+
+     
+    
+  </div>
+  <div class="to-top">
+    <div class="toTop-btn">
+    <div class="toTop-text">返回顶部</div>
+  	<button class="toTop-button">
+  		<i class="fa fa-arrow-up" aria-hidden="true"></i>
+  	</button >
+    </div>
+  </div>
+</footer>
+     
+    
+
+<script src="/js/qrcode.js"></script>
+<script src="/js/script.js"></script>
+<script src="/js/lightmode.js"></script>
+
+<script src="/js/iewarn.js"></script>
+
+
+  
+</body>
+</html>
